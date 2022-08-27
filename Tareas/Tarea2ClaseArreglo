@@ -1,0 +1,50 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package EstructuradeDatos;
+import java.util.Arrays;
+
+/**
+ *
+ * @author bryle
+ */
+public class Arreglo {
+   
+    private final int tamanio;
+    private final Object arr[];
+      public Arreglo(int tamanio) {
+        this.tamanio = tamanio;
+        this.arr = new Object[tamanio];
+    }
+ 
+    public int getLongitud() {
+        return this.tamanio;
+    }
+    public void setElemento(int index, T valor) {
+        this.arr[indice] = valor;
+    }
+        public Object getElemento(int index) {
+        return this.arr[indice];
+    }
+    
+    public void limpiar(T valor){
+        for(int i = 0; i < tamanio; i++) {
+            this.arr[i] = valor;
+        }
+    }
+        /**
+         *
+         * @return
+         */
+        @Override
+    public String toString(){
+        return Arrays.toString(this.arr);
+    }
+    private static class T {
+        public T() {
+        }
+    }
+    
+}
+
