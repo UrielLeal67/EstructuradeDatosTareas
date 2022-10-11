@@ -1,0 +1,86 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package listasligadas;
+
+/**
+ *
+ * @author bryle
+ */
+public class main {
+    public static void main(String[] args) {
+        
+        ListasLigadas<Integer> listaLigada;
+        listaLigada = new ListasLigadas<>();
+        System.out.println(listaLigada);
+        
+        System.out.println("¿La Lista esta vacia?:\t "+ listaLigada.estaVacio());
+        
+        System.out.println("Su tamaño es:\t "+ listaLigada.tamanio);
+        
+        System.out.println("Agregamos al inicio el valor 12");
+        listaLigada.agregarAlInicio(12);
+        System.out.println(listaLigada);
+        System.out.println("Agregamos al inicio el valor 17");
+        listaLigada.agregarAlInicio(17);
+        System.out.println(listaLigada);
+        System.out.println("Agregamos al inicio el valor 13");
+        listaLigada.agregarAlInicio(13);
+        System.out.println(listaLigada);
+        System.out.println("Agregamos al inicio el valor 10");
+        listaLigada.agregarAlInicio(10);
+        System.out.println(listaLigada); 
+        
+        System.out.println("**********");        
+        
+        System.out.println("Agregamos al final el valor 18");
+        listaLigada.agragarAlFInal(18);
+        System.out.println(listaLigada);
+        System.out.println("Agregamos al final el valor 89");
+        listaLigada.agragarAlFInal(89);
+        System.out.println(listaLigada);
+        System.out.println("Agregamos al final el valor 67");
+        listaLigada.agragarAlFInal(67);
+        System.out.println(listaLigada);
+        
+        System.out.println("**********");  
+        
+        System.out.println("Agregamos al final el valor 20 despues de 10");
+        listaLigada.agragarDespuesDe(10, 20);
+        System.out.println(listaLigada);
+        System.out.println("Agregamos al final el valor 12 despues de 75");
+        listaLigada.agragarDespuesDe(75, 12);
+        System.out.println(listaLigada);
+        System.out.println("Agregamos al final el valor 1 despues de 12");
+        listaLigada.agragarDespuesDe(12, 1);
+        System.out.println(listaLigada);
+        
+        System.out.println("**********");  
+        
+        System.out.println("Eliminaremos el valor de la posicion 4");
+        listaLigada.eliminarPorPosicion(4);
+        System.out.println(listaLigada);
+        
+        System.out.println("Eliminaremos al principio");
+        listaLigada.eliminarElPrimero();
+        System.out.println(listaLigada);
+        
+        System.out.println("Elimiaremos al final");
+        listaLigada.eliminarElUltimo();
+        System.out.println(listaLigada);
+        
+        System.out.println("**********"); 
+        
+        System.out.println("Busca el valor 12");
+        System.out.println("Esta en la posición: "+ listaLigada.Buscar(12));
+        
+        System.out.println("**********"); 
+        
+        System.out.println("Actualizaremos el valor 75 por el 99");
+        listaLigada.Actualizar(75, 99);
+        System.out.println(listaLigada);                 
+    }
+    
+}
+
