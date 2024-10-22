@@ -1,0 +1,54 @@
+class Pila:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.esta_vacia():
+            return self.items.pop()
+
+    def esta_vacia(self):
+        return len(self.items) == 0
+
+    def tamaño(self):
+        return len(self.items)
+
+# Función recursiva para obtener el valor en la posición media
+def obtener_medio(pila, tamaño, contador=0):
+    # Caso base: cuando llegamos a la posición media
+    if contador == tamaño // 2:
+        return pila.pop()
+    
+    # Guardar el valor actual
+    valor = pila.pop()
+    
+    # Recursión para seguir quitando elementos hasta llegar al medio
+    medio = obtener_medio(pila, tamaño, contador + 1)
+    
+    # Apilar de nuevo el valor actual
+    pila.push(valor)
+    
+    return medio
+
+# Ejemplo de uso
+pila = Pila()
+for i in range(1, 8):  # Pila con elementos 1 a 7
+    pila.push(i)
+
+tamaño = pila.tamaño()
+valor_medio = obtener_medio(pila, tamaño)
+print(f"Valor en la posición media: {valor_medio}")
+def potencia(a, b):
+    # Caso base: cualquier número elevado a 0 es 1
+    if b == 0:
+        return 1
+    # Caso recursivo: multiplicar 'a' por la potencia de 'a' a 'b-1'
+    return a * potencia(a, b - 1)
+
+# Ejemplo de uso
+a = 2
+b = 5
+resultado = potencia(a, b)
+print(f"{a} elevado a {b} es: {resultado}")
